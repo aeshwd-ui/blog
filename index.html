@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="shortcut icon" href="blog-logo.jpg" type="image/x-icon">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      cursor: not-allowed;
+      animation: flash-bg 1s infinite;
+    }
+
+
+    .container {
+      text-align: center;
+      animation: glitch 2s infinite;
+    }
+
+    .warning-sign {
+      font-size: 100px;
+      color: yellow;
+      text-shadow: 0 0 20px red, 0 0 30px yellow;
+    }
+
+    .alert-text {
+      margin-top: 20px;
+      font-size: 50px;
+      font-weight: bold;
+      color: red;
+      text-shadow: 0 0 10px black;
+     
+    }
+
+    .instructions {
+      margin-top: 20px;
+      font-size: 22px;
+      color: yellow;
+      text-shadow: 0 0 10px red;
+      animation: fade 3s infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+
+    @keyframes fade {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+
+    .terminal {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      color: green;
+      font-family: monospace;
+      font-size: 18px;
+      background: rgba(0, 0, 0, 0.8);
+      overflow: hidden;
+      height: 150px;
+      animation: glitch 2s infinite;
+    }
+
+    .terminal span {
+      display: block;
+      margin-left: 10px;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(-100%); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="warning-sign">⚠️</div>
+    <div class="alert-text">ALERT! Your browser has been hacked by Dark Web.</div>
+    <div class="instructions">If you want to save it, go to the nearest police station. Thanks.</div>
+  </div>
+
+  <!-- Terminal effect -->
+  <div class="terminal">
+    <span>Downloading your data...</span>
+    <span>Uploading to Dark Web...</span>
+    <span>Error: System compromised!</span>
+  </div>
+
+  <audio autoplay loop>
+    <source src="sci-fi-warning-alert-29632.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
